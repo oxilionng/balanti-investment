@@ -1,0 +1,27 @@
+plugins = []
+headers = []
+redirects = []
+
+[functions]
+
+[functions."*"]
+
+[build]
+publish = "C:\\Users\\OXILION LTD\\AppData\\Local\\hermes\\profiles\\oxisocial\\workspace\\websites\\balanti-investment-v2\\dist"
+publishOrigin = "ui"
+commandOrigin = "ui"
+command = "npm run build"
+
+[build.environment]
+
+[build.processing]
+
+[build.processing.css]
+
+[build.processing.html]
+
+[build.processing.images]
+
+[build.processing.js]
+
+[build.services]

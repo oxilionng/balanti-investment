@@ -1,0 +1,6 @@
+{
+  "name": "Balanti Investment",
+  "description": "Premium China-based sourcing, negotiation, and quality-control service for Nigerian and African importers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

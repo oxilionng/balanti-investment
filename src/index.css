@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-brand-navy: #F8F5F2;       /* Warm Cream editorial background */
+  --color-brand-charcoal: #FFFFFF;   /* Pure White container background */
+  --color-brand-gold: #047857;       /* Rich Emerald green primary accent */
+  --color-brand-gold-dark: #065f46;  /* Deeper emerald green */
+  --color-brand-cream: #F8F5F2;      /* Elegant warm cream */
+  --color-brand-cream-dark: #EAE5E0; /* Warm grey/cream transition */
+  --color-brand-emerald: #10B981;    /* Vibrant emerald indicator */
+  --color-brand-emerald-light: #34D399;
+}
+
+/* Base elements and transitions */
+html, body {
+  scroll-behavior: smooth;
+  background-color: #F8F5F2 !important;
+  color: #0F172A !important;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Base selection styling */
+::selection {
+  background-color: #047857;
+  color: #FFFFFF;
+}
+
+/* Custom premium scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F8F5F2;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #047857;
+}
+
+/* High-end custom interactive desktop cursor */
+.border-brand-gold {
+  border-color: #047857 !important;
+}
+
+/* Elegant suit/grain texture overlay */
+.premium-grain {
+  position: relative;
+}
+.premium-grain::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  opacity: 0.03;
+  pointer-events: none;
+  background-image: url("https://www.transparenttextures.com/patterns/pinstriped-suit.png");
+  z-index: 10;
+}
+
+/* Line-pattern grid accent for backgrounds */
+.editorial-grid {
+  background-size: 50px 50px;
+  background-image: linear-gradient(to right, rgba(4, 120, 87, 0.03) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(4, 120, 87, 0.03) 1px, transparent 1px) !important;
+}
+
+.editorial-grid-light {
+  background-size: 60px 60px;
+  background-image: linear-gradient(to right, rgba(15, 23, 42, 0.03) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(15, 23, 42, 0.03) 1px, transparent 1px) !important;
+}
+
+/* GLOBAL TEXT COLOR FIXES FOR CREAM LIGHT THEME */
+.text-white, .text-slate-100, .text-slate-200 {
+  color: #0F172A !important;
+}
+
+.text-slate-300, .text-slate-400 {
+  color: #334155 !important; /* Rich readable dark slate-gray */
+}
+
+.text-slate-500 {
+  color: #64748B !important;
+}
+
+/* Specific text color exemptions (like buttons, tags, or dark sections) */
+button.text-brand-navy, .bg-brand-gold button, .text-slate-100.font-mono, .bg-emerald-500\/10 *, .bg-brand-gold * {
+  color: #0F172A !important;
+}
+
+/* Solid CTA buttons should have correct dark navy text or white text */
+button.bg-brand-gold, a.bg-brand-gold, button#hero-primary-cta, button#submit-form-button, button#mobile-nav-cta {
+  background-color: #047857 !important;
+  color: #FFFFFF !important;
+}
+button.bg-brand-gold:hover, a.bg-brand-gold:hover, button#hero-primary-cta:hover, button#submit-form-button:hover, button#mobile-nav-cta:hover {
+  background-color: #065f46 !important;
+}
+
+/* Section dividers and light borders */
+.border-brand-gold\/10, .border-brand-gold\/15, .border-brand-gold\/5, .border-brand-gold\/20, .border-slate-700, .border-slate-800 {
+  border-color: #E2E8F0 !important;
+}
+
+/* Keep active route state lines green */
+.bg-brand-gold {
+  background-color: #047857 !important;
+}
+
+/* Navigation Overrides to align with Design HTML */
+#global-navbar {
+  background-color: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(12px) !important;
+  border-bottom: 1px solid #E2E8F0 !important;
+  box-shadow: 0 4px 30px rgba(15, 23, 42, 0.02) !important;
+}
+
+#global-navbar button {
+  color: #334155 !important;
+}
+
+#global-navbar button:hover {
+  color: #047857 !important;
+}
+
+/* Navbar action button */
+#nav-cta-button {
+  background-color: #0F172A !important;
+  color: #FFFFFF !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+#nav-cta-button:hover {
+  background-color: #047857 !important;
+  color: #FFFFFF !important;
+}
+
+/* Footer Overrides to align with Design HTML */
+#global-footer {
+  background-color: #FFFFFF !important;
+  border-top: 1px solid #E2E8F0 !important;
+}
+
+#global-footer *, #global-footer button, #global-footer a {
+  color: #475569 !important;
+}
+
+#global-footer h4, #global-footer strong {
+  color: #0F172A !important;
+}
+
+#global-footer button:hover, #global-footer a:hover {
+  color: #047857 !important;
+}
+
+/* Container & Grid Elements Overrides */
+.bg-\[\#0D1525\], .bg-brand-charcoal, .bg-brand-navy {
+  background-color: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
+}
+
+.bg-brand-navy {
+  background-color: #F8F5F2 !important;
+}
+
+/* Retain maps and specific dark dashboards with high contrast */
+.schematic-dark, .abstract-pane, #home-hero svg {
+  opacity: 0.8;
+}
+
+/* Ensure headings utilize correct fonts */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  color: #0F172A !important;
+}
+
+/* Hover effects for bento blocks / strips as in Design HTML */
+.border-r.border-gray-300:hover, .hover\:bg-white:hover {
+  background-color: #FFFFFF !important;
+}
+
